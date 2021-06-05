@@ -1,0 +1,55 @@
+{
+  "name": "alkemy_front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "dev": "webpack serve --mode development --env development",
+    "lint": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rln-tomas/alkemy_front.git"
+  },
+  "keywords": [],
+  "author": "Tomás Ezequiel Rolón",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rln-tomas/alkemy_front/issues"
+  },
+  "homepage": "https://github.com/rln-tomas/alkemy_front#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.13.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.24.0",
+    "html-webpack-plugin": "^5.3.1",
+    "standard": "^16.0.3",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "standard": {
+    "ignore": [
+      "/dist/**",
+      "/node_modules/**"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/.bin/standard/eslintrc.json"
+    ]
+  }
+}
