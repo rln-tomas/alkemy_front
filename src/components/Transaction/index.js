@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const TestR = () => {
+export const Transaction = () => {
   return (
         <div>
-            <h1>Hola desde test 2</h1>
+            This is a transaction
         </div>
   )
 }
