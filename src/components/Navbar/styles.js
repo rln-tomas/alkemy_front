@@ -107,8 +107,16 @@ export const Item = styled.li`
     color:#fff;
     list-style: none;
     display: flex;
+    position: relative;
     font-size: large;
     justify-content: center;
     align-items: center;
     padding: 10px 0; 
+    right:30px;
+`
+
+export const List = styled.ul`
+    display:flex; 
+    flex-direction:column;
+    align-items: center;
 `
