@@ -12,6 +12,7 @@ export const HeaderDiv = styled.div`
     padding: 1rem;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1rem;
 
     @media (min-width: 361px){
         max-width: 800px;

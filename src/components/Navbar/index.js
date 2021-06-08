@@ -15,6 +15,11 @@ export const Navbar = () => {
                 <MonetizationOnIcon fontSize="large" />
             </NavLink>
             <Bars onClick={onClickMenu} />
+            <NavBtn>
+                <NavBtnLink to="/algo2">
+                    <ExitToAppIcon />
+                </NavBtnLink>
+            </NavBtn>
         </NavDiv>
         <Nav className={showSidebar ? '' : 'active'} >
             <List>
@@ -22,12 +27,8 @@ export const Navbar = () => {
                 <Item>Algo</Item>
                 <Item>Algo</Item>
             </List>
-            <NavBtn>
-                <NavBtnLink to="/algo2">
-                    <ExitToAppIcon />
-                </NavBtnLink>
-            </NavBtn>
         </Nav>
+
         </>
   )
 }
