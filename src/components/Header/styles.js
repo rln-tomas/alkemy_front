@@ -13,7 +13,7 @@ export const HeaderDiv = styled.div`
     justify-content: center;
     align-items: center;
 
-    @media (min-width: 641px){
+    @media (min-width: 361px){
         max-width: 800px;
     }
    

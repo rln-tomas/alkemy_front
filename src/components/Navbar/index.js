@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Nav, NavBtn, NavLink, NavBtnLink, Bars, NavDiv, Item } from './styles'
+import { Nav, NavBtn, NavLink, NavBtnLink, Bars, NavDiv, Item, List } from './styles'
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 
@@ -17,11 +17,11 @@ export const Navbar = () => {
             <Bars onClick={onClickMenu} />
         </NavDiv>
         <Nav className={showSidebar ? '' : 'active'} >
-            <ul>
+            <List>
                 <Item>Algo</Item>
                 <Item>Algo</Item>
                 <Item>Algo</Item>
-            </ul>
+            </List>
             <NavBtn>
                 <NavBtnLink to="/algo2">
                     <ExitToAppIcon />
