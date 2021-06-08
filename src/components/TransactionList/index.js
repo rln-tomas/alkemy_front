@@ -1,9 +1,15 @@
 import React from 'react'
+import { Transaction } from '../Transaction'
+import { ListDiv } from './styles'
 
-export const TransactionList = () => {
+export const TransactionList = ({ transactions }) => {
   return (
-        <h1>
-            This is the transaction list
-        </h1>
+        <ListDiv>
+          {transactions.map(item => {
+            return (
+              <Transaction key={item.id} item={item} />
+            )
+          })}
+        </ListDiv>
   )
 }
