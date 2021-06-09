@@ -8,8 +8,8 @@ export const GlobalDiv = styled.div`
     justify-content: center;
     text-align: center;
     @media (min-width: 361px){
-        max-width: 100vw;
-        max-height: 100vh;
+        max-width: 100%;
+        max-height: 100%;
     }
 `
 export const Img = styled.img`
