@@ -6,4 +6,8 @@ export const ListDiv = styled.div`
     justify-content: center;
     align-items: center;
     margin: 0 auto; 
+    overflow: scroll;
+    ::-webkit-scrollbar {
+        display: none;
+    }
 `
