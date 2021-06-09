@@ -8,6 +8,7 @@ export const NavDiv = styled.div`
     max-width: 360px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0.5rem;
     z-index: 10;
 
