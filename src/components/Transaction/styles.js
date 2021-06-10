@@ -3,7 +3,7 @@ import EditIcon from '@material-ui/icons/Edit'
 import DeleteIcon from '@material-ui/icons/Delete'
 
 export const TransactionDiv = styled.div`
-    width:360px;
+    width:350px;
     height: 40px;
     align-items: center;
     display: flex;
@@ -41,7 +41,7 @@ export const TransactionConcept = styled.div`
 `
 
 export const Edit = styled(EditIcon)`
-    color:blue; 
+    color:rgb(0, 147, 232);  
 `
 export const Delete = styled(DeleteIcon)`
     color:red; 

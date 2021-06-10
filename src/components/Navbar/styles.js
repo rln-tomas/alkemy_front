@@ -132,5 +132,11 @@ export const Item = styled.li`
 export const List = styled.ul`
     display:flex; 
     flex-direction:column;
+    position:relative; 
+    left:30px; 
     align-items: center;
+    &.navbar{
+        display:none; 
+        visibility: hidden;
+    }
 `
