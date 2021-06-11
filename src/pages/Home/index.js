@@ -22,6 +22,7 @@ const balance = (items) => {
 export const Home = () => {
   const [showModal, setShowModal] = useState(false)
   const [transactions, setTrasactions] = useState([])
+  const [edit, setEdit] = useState(false)
   const [transac, setTransaction] = useState({
     concept: '',
     amount: 0,
@@ -31,13 +32,15 @@ export const Home = () => {
   const [total, setTotal] = useState(0)
   const [loadingTransaction, setLoading] = useState(false)
 
+  /*
   useEffect(() => {
     axios.get('http://localhost:4000/transactions/myTransactions').then(res => {
       setTrasactions(res.data.data)
       const t = balance(res.data.data)
       setTotal(t)
     })
-  }, [])
+  }, []) */
+  // Not necesary
 
   useEffect(() => {
     axios.get('http://localhost:4000/transactions/myTransactions').then(res => {
@@ -49,19 +52,26 @@ export const Home = () => {
 
   const onCloseModal = () => {
     setShowModal(!showModal)
+    setEdit(false)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:4000/transactions', transac).then(res => {
-      setLoading(!loadingTransaction)
-      setTransaction({
-        concept: '',
-        amount: 0,
-        date: undefined,
-        type: ''
+    if (edit) {
+      axios.patch('http://localhost:4000/transactions', transac).then(res => {
+        setLoading(!loadingTransaction)
       })
-    })
+    } else {
+      axios.post('http://localhost:4000/transactions', transac).then(res => {
+        setLoading(!loadingTransaction)
+        setTransaction({
+          concept: '',
+          amount: 0,
+          date: Date.now(),
+          type: ''
+        })
+      })
+    }
   }
 
   const handleChange = (e) => {
@@ -77,6 +87,19 @@ export const Home = () => {
     })
   }
 
+  const handleUpdate = (e, item) => {
+    setEdit(true)
+
+    setTransaction({
+      ...transac,
+      id: item.id,
+      type: item.type,
+      concept: item.concept,
+      amount: item.amount
+    })
+    setShowModal(!showModal)
+  }
+
   return (
         <>
           <Helmet>
@@ -87,9 +110,9 @@ export const Home = () => {
 
           <GlobalDiv >
               <Header onOpen={onCloseModal} balance={total} />
-              <TransactionList transactions={transactions} onDelete={handleDelete} />
+              <TransactionList transactions={transactions} onDelete={handleDelete} onUpdate={handleUpdate} />
           </GlobalDiv>
-          <ModalForm isOpen={showModal} onClose={onCloseModal} onSubmit={handleSubmit} onChange={handleChange} value={transac} />
+          <ModalForm isOpen={showModal} onClose={onCloseModal} onSubmit={handleSubmit} onChange={handleChange} value={transac} edit={edit} />
         </>
   )
 }

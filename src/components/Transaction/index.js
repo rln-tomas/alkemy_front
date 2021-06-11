@@ -5,7 +5,7 @@ import TrendingUpTwoToneIcon from '@material-ui/icons/TrendingUpTwoTone'
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney'
 import { IconButton } from '@material-ui/core'
 
-export const Transaction = ({ item, onDelete }) => {
+export const Transaction = ({ item, onDelete, onUpdate }) => {
   const icon = item.type === 'Expense' ? <TrendingDownTwoToneIcon color='secondary' />
     : <TrendingUpTwoToneIcon style={{ color: 'green' }} />
 
@@ -23,7 +23,7 @@ export const Transaction = ({ item, onDelete }) => {
               <h4>{item.concept}</h4>
             </TransactionConcept>
             <TransactionActions>
-              <IconButton>
+              <IconButton onClick={(e) => onUpdate(e, item)}>
                 <Edit/>
               </IconButton>
               <IconButton onClick={(e) => onDelete(e, item.id)}>

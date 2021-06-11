@@ -19,7 +19,7 @@ export const ModalForm = (props) => {
                 <br />
 
                 <label>Type: </label>
-                <select name="type" value={props.value.type} onChange={props.onChange}>
+                <select name="type" value={props.value.type} onChange={props.onChange} disabled={props.edit} >
                     <option>Income</option>
                     <option>Expense</option>
                 </select>

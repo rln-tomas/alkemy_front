@@ -2,7 +2,7 @@ import React from 'react'
 import { Transaction } from '../Transaction'
 import { ListDiv } from './styles'
 
-export const TransactionList = ({ transactions, onDelete }) => {
+export const TransactionList = ({ transactions, onDelete, onUpdate }) => {
   return (
         <ListDiv>
           {transactions.map(item => {
