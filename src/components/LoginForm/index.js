@@ -11,7 +11,7 @@ export const LoginForm = ({ activateAuth }) => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:4000/users/login', {
+    axios.post('https://limitless-oasis-80610.herokuapp.com/users/login', {
       username: username.value,
       password: password.value
     }).then(res => {

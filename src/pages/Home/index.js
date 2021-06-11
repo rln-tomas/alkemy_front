@@ -43,7 +43,7 @@ export const Home = () => {
   // Not necesary
 
   useEffect(() => {
-    axios.get('http://localhost:4000/transactions/myTransactions').then(res => {
+    axios.get('https://limitless-oasis-80610.herokuapp.com/transactions/myTransactions').then(res => {
       setTrasactions(res.data.data)
       const t = balance(res.data.data)
       setTotal(t)
@@ -58,11 +58,11 @@ export const Home = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (edit) {
-      axios.patch('http://localhost:4000/transactions', transac).then(res => {
+      axios.patch('https://limitless-oasis-80610.herokuapp.com/transactions', transac).then(res => {
         setLoading(!loadingTransaction)
       })
     } else {
-      axios.post('http://localhost:4000/transactions', transac).then(res => {
+      axios.post('https://limitless-oasis-80610.herokuapp.com/transactions', transac).then(res => {
         setLoading(!loadingTransaction)
         setTransaction({
           concept: '',
@@ -82,7 +82,7 @@ export const Home = () => {
   }
 
   const handleDelete = (e, id) => {
-    axios.delete(`http://localhost:4000/transactions/${id}`).then(res => {
+    axios.delete(`https://limitless-oasis-80610.herokuapp.com/transactions/${id}`).then(res => {
       setLoading(!loadingTransaction)
     })
   }
