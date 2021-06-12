@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
 export const HeaderDiv = styled.div`
-    max-width: 340px;
-    background-color: #00A2FF;
-    min-width: 300px;
+    max-width: 360px;
+    background-color: rgb(0, 162, 255,.8);
     display: flex;
     flex-direction: column;
     max-height: 300px;
@@ -12,9 +11,14 @@ export const HeaderDiv = styled.div`
     padding: 1rem;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
 
     @media (min-width: 361px){
-        max-width: 800px;
+        min-width: 55rem;
+        height: 200px;
+        border-radius: 20px;
+        margin: 2px auto; 
     }
    
 `
