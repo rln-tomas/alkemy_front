@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack serve --history-api-fallback",
+    "dev": "webpack serve --history-api-fallback --mode development",
     "lint": "standard"
   },
   "repository": {
@@ -38,9 +38,14 @@
     "webpack-dev-server": "^3.7.2"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0"
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.3.0"
   },
   "standard": {
     "ignore": [
