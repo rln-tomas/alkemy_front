@@ -29,7 +29,7 @@ export const Navbar = () => {
                             </NavLink>
 
                             <Bars onClick={onClickMenu} />
-                            <div>
+                            <div className={isAuth ? '' : 'navbar'}>
                                 <NavBtn>
                                     <NavBtnLink to="/profile">
                                         <AccountCircleIcon />

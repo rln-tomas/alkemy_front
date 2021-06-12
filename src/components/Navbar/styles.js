@@ -11,7 +11,11 @@ export const NavDiv = styled.div`
     align-items: center;
     padding: 0.5rem;
     z-index: 10;
-
+    && div {
+        &.navbar{
+            display: none; 
+        }
+    }
     @media (min-width: 361px){
         max-width: 100vw;
     }

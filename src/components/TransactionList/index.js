@@ -3,13 +3,16 @@ import { Transaction } from '../Transaction'
 import { ListDiv } from './styles'
 
 export const TransactionList = ({ transactions, onDelete, onUpdate }) => {
-  return (
-        <ListDiv>
-          {transactions.map(item => {
-            return (
-              <Transaction key={item.id} item={item} onDelete={onDelete} onUpdate={onUpdate} />
-            )
-          })}
-        </ListDiv>
-  )
+  if (transactions) {
+    return (
+          <ListDiv>
+            {transactions.map(item => {
+              return (
+                <Transaction key={item.id} item={item} onDelete={onDelete} onUpdate={onUpdate} />
+              )
+            })}
+          </ListDiv>
+    )
+  }
+  return null
 }

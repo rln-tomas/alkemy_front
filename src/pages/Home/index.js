@@ -34,13 +34,12 @@ export const Home = () => {
 
   /*
   useEffect(() => {
-    axios.get('http://localhost:4000/transactions/myTransactions').then(res => {
+    axios.get('https://limitless-oasis-80610.herokuapp.com/transactions/myTransactions').then(res => {
       setTrasactions(res.data.data)
       const t = balance(res.data.data)
       setTotal(t)
     })
-  }, []) */
-  // Not necesary
+  }, []) */ // not necesary
 
   useEffect(() => {
     axios.get('https://limitless-oasis-80610.herokuapp.com/transactions/myTransactions').then(res => {
